@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import { CookiesProvider } from "react-cookie";
 import './App.css';
+import Schedular from "./components/Scheduler";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CookiesProvider>
+      <div className="App">
+        <h1>Manual Scheduler</h1>
+        <Schedular />
+    
+      </div>
+    </CookiesProvider>
   );
 }
 
-export default App;
